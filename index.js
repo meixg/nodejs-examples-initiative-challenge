@@ -1,6 +1,9 @@
-const express = require('express')
+const server = require('./src')
 
-const app = express()
-const PORT = 3000
+async function start() {
+    const PORT = 3000
+    server.listen(PORT)
+    console.log(`server started at http://localhost:${PORT}`);
+}
 
-app.listen(PORT)
+start()
